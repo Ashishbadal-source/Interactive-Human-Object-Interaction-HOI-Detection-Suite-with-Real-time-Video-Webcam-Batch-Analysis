@@ -77,19 +77,19 @@ export const ModelModal: React.FC<ModelModalProps> = ({ isOpen, onClose, modelIn
             gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
             gap: '12px',
           }}>
-            <div style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
               <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Backbone</div>
               <div style={{ fontSize: '14px', fontWeight: 600, color: '#38bdf8' }}>ResNet-50</div>
             </div>
-            <div style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
               <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Transformer Layers</div>
               <div style={{ fontSize: '14px', fontWeight: 600, color: '#c084fc' }}>6 Enc + 6 Dec</div>
             </div>
-            <div style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
               <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Queries</div>
               <div style={{ fontSize: '14px', fontWeight: 600, color: '#34d399' }}>{modelInfo?.num_queries || 64} Queries</div>
             </div>
-            <div style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
+            <div style={{ background: 'var(--bg-card)', padding: '12px', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
               <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Dataset</div>
               <div style={{ fontSize: '14px', fontWeight: 600, color: '#fbbf24' }}>HICO-DET</div>
             </div>
@@ -106,8 +106,8 @@ export const ModelModal: React.FC<ModelModalProps> = ({ isOpen, onClose, modelIn
           </div>
 
           {/* Architecture Pipeline Steps */}
-          <div style={{ background: 'rgba(15, 23, 42, 0.7)', borderRadius: '12px', padding: '16px', border: '1px solid var(--border-subtle)' }}>
-            <div style={{ fontSize: '13px', fontWeight: 600, color: '#fff', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ background: 'var(--bg-card)', borderRadius: '12px', padding: '16px', border: '1px solid var(--border-subtle)' }}>
+            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <IconCpu size={16} color="#38bdf8" />
               <span>Inference Pipeline Breakdown</span>
             </div>
