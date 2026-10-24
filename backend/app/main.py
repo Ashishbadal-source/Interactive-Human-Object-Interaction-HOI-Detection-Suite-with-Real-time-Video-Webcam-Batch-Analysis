@@ -1,12 +1,10 @@
-"""
-MUREN AI – FastAPI application entry point.
-
-Loads the MUREN model at startup and serves the inference API.
-"""
+import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from .api.routes import router
 from .api.video_routes import router as video_router
@@ -32,18 +30,28 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS
+# CORS: Allow all origins in production/deployment or local configured origins
+allowed_origins = list(settings.CORS_ORIGINS)
+if "*" not in allowed_origins:
+    allowed_origins.append("*")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Register routes
+# Register API routes
 app.include_router(router)
 app.include_router(video_router)
 app.include_router(webcam_router)
 app.include_router(batch_router)
+
+# Mount React static files if built frontend exists (production mode)
+frontend_dist = settings.PROJECT_ROOT / "frontend" / "dist"
+if frontend_dist.is_dir():
+    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="frontend")
+
 

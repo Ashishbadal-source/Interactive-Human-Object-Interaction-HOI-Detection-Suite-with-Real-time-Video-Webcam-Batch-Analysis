@@ -12,6 +12,8 @@ Pillow>=10.0.0,<11.0.0
 # torch==2.1.2+cpu
 # torchvision==0.16.2+cpu
 
-# Required by the existing model code
+# Required by the existing model code and video processing
 scipy>=1.11.0
 numpy>=1.24.0
+opencv-python-headless>=4.8.0
+

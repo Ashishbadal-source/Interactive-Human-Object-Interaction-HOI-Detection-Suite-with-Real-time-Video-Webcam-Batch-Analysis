@@ -1,0 +1,28 @@
+# Git and IDE
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# Frontend build cache & dependencies
+frontend/node_modules
+frontend/dist
+frontend/.vite
+
+# Python cache & virtual environments
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+env
+venv
+
+# Generated runtime outputs
+backend/uploads/*
+backend/results/*
+backend/video_uploads/*
+backend/video_results/*
+video_uploads
+video_results
