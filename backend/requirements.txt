@@ -1,0 +1,17 @@
+# MUREN AI Backend Dependencies
+# Compatible with Python 3.11 + PyTorch 2.1.2 CPU
+fastapi>=0.104.0,<1.0.0
+uvicorn[standard]>=0.24.0,<1.0.0
+pydantic>=2.5.0,<3.0.0
+pydantic-settings>=2.1.0,<3.0.0
+python-multipart>=0.0.6,<1.0.0
+Pillow>=10.0.0,<11.0.0
+
+# PyTorch / torchvision – already installed in the environment.
+# Do NOT reinstall these; they are pinned to the CPU-only builds.
+# torch==2.1.2+cpu
+# torchvision==0.16.2+cpu
+
+# Required by the existing model code
+scipy>=1.11.0
+numpy>=1.24.0
