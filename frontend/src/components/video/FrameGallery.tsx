@@ -51,7 +51,7 @@ export const FrameGallery: React.FC<FrameGalleryProps> = ({
                 minWidth: '150px',
                 borderRadius: '10px',
                 overflow: 'hidden',
-                backgroundColor: 'rgba(15, 23, 42, 0.7)',
+                backgroundColor: 'var(--bg-card)',
                 border: isSelected ? '2px solid #06b6d4' : '1px solid var(--border-subtle)',
                 boxShadow: isSelected ? '0 0 15px rgba(6, 182, 212, 0.4)' : 'none',
                 cursor: 'pointer',

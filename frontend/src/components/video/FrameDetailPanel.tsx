@@ -56,7 +56,7 @@ export const FrameDetailPanel: React.FC<FrameDetailPanelProps> = ({ selectedFram
         </div>
 
         {/* View Switcher */}
-        <div style={{ display: 'flex', gap: '4px', background: 'rgba(15, 23, 42, 0.8)', padding: '2px', borderRadius: '6px' }}>
+        <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-card)', padding: '2px', borderRadius: '6px', border: '1px solid var(--border-subtle)' }}>
           <button
             onClick={() => setViewMode('interactive')}
             style={{
@@ -283,7 +283,7 @@ export const FrameDetailPanel: React.FC<FrameDetailPanelProps> = ({ selectedFram
 
         {!hasPredictions ? (
           <div style={{
-            background: 'rgba(15, 23, 42, 0.6)',
+            background: 'var(--bg-card)',
             borderRadius: '10px',
             padding: '16px',
             textAlign: 'center',
@@ -291,7 +291,7 @@ export const FrameDetailPanel: React.FC<FrameDetailPanelProps> = ({ selectedFram
             fontSize: '12px',
             color: 'var(--text-secondary)',
           }}>
-            <p style={{ marginBottom: '4px', color: '#f8fafc', fontWeight: 600 }}>
+            <p style={{ marginBottom: '4px', color: 'var(--text-primary)', fontWeight: 600 }}>
               No interactions met the selected thresholds for this frame.
             </p>
             <p style={{ margin: 0, fontSize: '11px', color: 'var(--text-muted)' }}>
@@ -321,7 +321,7 @@ export const FrameDetailPanel: React.FC<FrameDetailPanelProps> = ({ selectedFram
                   style={{
                     borderRadius: '10px',
                     padding: '12px 14px',
-                    backgroundColor: isHovered ? 'rgba(30, 41, 59, 0.85)' : 'rgba(15, 23, 42, 0.7)',
+                    backgroundColor: isHovered ? 'var(--bg-surface-elevated)' : 'var(--bg-card)',
                     border: isHovered ? '1.5px solid #06b6d4' : '1px solid var(--border-subtle)',
                     boxShadow: isHovered ? '0 0 14px rgba(6, 182, 212, 0.3)' : 'none',
                     display: 'flex',

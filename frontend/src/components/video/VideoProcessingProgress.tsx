@@ -23,12 +23,12 @@ export const VideoProcessingProgress: React.FC<VideoProcessingProgressProps> = (
       flexDirection: 'column',
       gap: '12px',
       border: isRunning ? '1px solid rgba(6, 182, 212, 0.4)' : (isFailed ? '1px solid rgba(244, 63, 94, 0.4)' : '1px solid var(--border-subtle)'),
-      background: isRunning ? 'rgba(15, 23, 42, 0.9)' : 'rgba(15, 23, 42, 0.75)',
+      background: 'var(--bg-card)',
     }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <IconCpu size={16} color={isRunning ? '#06b6d4' : '#c084fc'} />
-          <span style={{ fontSize: '13px', fontWeight: 600, color: '#f8fafc' }}>
+          <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)' }}>
             {status.message || 'Processing Video...'}
           </span>
         </div>

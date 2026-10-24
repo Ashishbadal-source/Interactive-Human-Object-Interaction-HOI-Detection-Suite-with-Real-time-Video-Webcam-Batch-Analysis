@@ -44,7 +44,7 @@ export const TemporalActionIntervals: React.FC<TemporalActionIntervalsProps> = (
               key={item.interval_id}
               onClick={() => onSeek(item.start_timestamp)}
               style={{
-                backgroundColor: 'rgba(15, 23, 42, 0.75)',
+                backgroundColor: 'var(--bg-card)',
                 border: '1px solid var(--border-subtle)',
                 borderRadius: '10px',
                 padding: '12px 16px',
@@ -56,11 +56,11 @@ export const TemporalActionIntervals: React.FC<TemporalActionIntervalsProps> = (
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = '#c084fc';
-                e.currentTarget.style.backgroundColor = 'rgba(30, 41, 59, 0.85)';
+                e.currentTarget.style.backgroundColor = 'var(--bg-surface-elevated)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = 'var(--border-subtle)';
-                e.currentTarget.style.backgroundColor = 'rgba(15, 23, 42, 0.75)';
+                e.currentTarget.style.backgroundColor = 'var(--bg-card)';
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '6px' }}>

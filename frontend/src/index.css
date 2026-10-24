@@ -145,6 +145,46 @@
   border-color: rgba(124, 58, 237, 0.3);
 }
 
+/* ==========================================================================
+   Universal Light Mode Clean White Overrides
+   ========================================================================== */
+[data-theme="light"] div[style*="rgba(15, 23, 42"],
+[data-theme="light"] div[style*="rgba(30, 41, 59"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+[data-theme="light"] button[style*="rgba(30, 41, 59"] {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="light"] button[style*="rgba(15, 23, 42"] {
+  background: #f1f5f9 !important;
+  color: #475569 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="light"] input[type="text"][style*="rgba(15, 23, 42"] {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+[data-theme="light"] span[style*="#f8fafc"],
+[data-theme="light"] div[style*="#f8fafc"] {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .upload-dropzone,
+[data-theme="light"] div[style*="border: 2px dashed"] {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+
 [data-theme="light"] .badge-emerald {
   background: rgba(5, 150, 105, 0.12);
   color: #059669;

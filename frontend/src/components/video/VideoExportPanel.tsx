@@ -83,7 +83,7 @@ export const VideoExportPanel: React.FC<VideoExportPanelProps> = ({
     <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <IconDownload size={18} color="#34d399" />
-        <span style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+        <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
           Video & Report Export Center
         </span>
       </div>
@@ -91,7 +91,7 @@ export const VideoExportPanel: React.FC<VideoExportPanelProps> = ({
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
         {/* Option 1: Sampled-Frame Video */}
         <div style={{
-          background: 'rgba(15, 23, 42, 0.6)',
+          background: 'var(--bg-card)',
           borderRadius: '10px',
           padding: '14px',
           border: '1px solid var(--border-subtle)',
@@ -121,7 +121,7 @@ export const VideoExportPanel: React.FC<VideoExportPanelProps> = ({
 
         {/* Option 2: Original-Duration Video */}
         <div style={{
-          background: 'rgba(15, 23, 42, 0.6)',
+          background: 'var(--bg-card)',
           borderRadius: '10px',
           padding: '14px',
           border: '1px solid var(--border-subtle)',
@@ -161,7 +161,7 @@ export const VideoExportPanel: React.FC<VideoExportPanelProps> = ({
 
         {/* Option 3: Academic Research Report */}
         <div style={{
-          background: 'rgba(15, 23, 42, 0.6)',
+          background: 'var(--bg-card)',
           borderRadius: '10px',
           padding: '14px',
           border: '1px solid var(--border-subtle)',
@@ -190,7 +190,7 @@ export const VideoExportPanel: React.FC<VideoExportPanelProps> = ({
 
         {/* Option 4: JSON Analysis Data */}
         <div style={{
-          background: 'rgba(15, 23, 42, 0.6)',
+          background: 'var(--bg-card)',
           borderRadius: '10px',
           padding: '14px',
           border: '1px solid var(--border-subtle)',

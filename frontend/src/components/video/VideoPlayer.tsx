@@ -117,16 +117,16 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
           width: '56px',
           height: '56px',
           borderRadius: '14px',
-          background: 'rgba(30, 41, 59, 0.5)',
+          background: 'rgba(139, 92, 246, 0.12)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           marginBottom: '14px',
-          color: '#94a3b8',
+          color: 'var(--violet-primary)',
         }}>
           <IconClock size={28} />
         </div>
-        <div style={{ fontSize: '15px', fontWeight: 600, color: '#f8fafc', marginBottom: '4px' }}>
+        <div style={{ fontSize: '15px', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '4px' }}>
           Original Video Synchronizer
         </div>
         <div style={{ fontSize: '12px', color: 'var(--text-secondary)', maxWidth: '380px' }}>

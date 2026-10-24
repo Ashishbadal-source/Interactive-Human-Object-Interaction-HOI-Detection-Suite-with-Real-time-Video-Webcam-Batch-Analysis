@@ -59,7 +59,7 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
     <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <IconSliders size={18} color="#06b6d4" />
-        <span style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+        <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
           Sampling & Inference Policy
         </span>
       </div>
@@ -75,11 +75,11 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
             style={{
               padding: '7px 6px',
               borderRadius: '8px',
-              border: 'none',
+              border: samplingMode === 'interval' ? 'none' : '1px solid var(--border-subtle)',
               fontSize: '10.5px',
               fontWeight: 600,
               cursor: 'pointer',
-              background: samplingMode === 'interval' ? 'linear-gradient(135deg, #06b6d4, #2563eb)' : 'rgba(30, 41, 59, 0.6)',
+              background: samplingMode === 'interval' ? 'linear-gradient(135deg, #06b6d4, #2563eb)' : 'var(--bg-card)',
               color: samplingMode === 'interval' ? '#fff' : 'var(--text-secondary)',
               transition: 'all 150ms ease',
             }}
@@ -91,11 +91,11 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
             style={{
               padding: '7px 6px',
               borderRadius: '8px',
-              border: 'none',
+              border: samplingMode === 'uniform' ? 'none' : '1px solid var(--border-subtle)',
               fontSize: '10.5px',
               fontWeight: 600,
               cursor: 'pointer',
-              background: samplingMode === 'uniform' ? 'linear-gradient(135deg, #8b5cf6, #6366f1)' : 'rgba(30, 41, 59, 0.6)',
+              background: samplingMode === 'uniform' ? 'linear-gradient(135deg, #8b5cf6, #6366f1)' : 'var(--bg-card)',
               color: samplingMode === 'uniform' ? '#fff' : 'var(--text-secondary)',
               transition: 'all 150ms ease',
             }}
@@ -107,11 +107,11 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
             style={{
               padding: '7px 6px',
               borderRadius: '8px',
-              border: 'none',
+              border: samplingMode === 'motion_adaptive' ? 'none' : '1px solid var(--border-subtle)',
               fontSize: '10.5px',
               fontWeight: 600,
               cursor: 'pointer',
-              background: samplingMode === 'motion_adaptive' ? 'linear-gradient(135deg, #f59e0b, #d97706)' : 'rgba(30, 41, 59, 0.6)',
+              background: samplingMode === 'motion_adaptive' ? 'linear-gradient(135deg, #f59e0b, #d97706)' : 'var(--bg-card)',
               color: samplingMode === 'motion_adaptive' ? '#fff' : 'var(--text-secondary)',
               transition: 'all 150ms ease',
             }}
@@ -123,11 +123,11 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
             style={{
               padding: '7px 6px',
               borderRadius: '8px',
-              border: 'none',
+              border: samplingMode === 'manual' ? 'none' : '1px solid var(--border-subtle)',
               fontSize: '10.5px',
               fontWeight: 600,
               cursor: 'pointer',
-              background: samplingMode === 'manual' ? 'linear-gradient(135deg, #10b981, #059669)' : 'rgba(30, 41, 59, 0.6)',
+              background: samplingMode === 'manual' ? 'linear-gradient(135deg, #10b981, #059669)' : 'var(--bg-card)',
               color: samplingMode === 'manual' ? '#fff' : 'var(--text-secondary)',
               transition: 'all 150ms ease',
             }}
@@ -172,8 +172,8 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
                   padding: '5px',
                   borderRadius: '6px',
                   border: samplingInterval === val ? '1px solid #06b6d4' : '1px solid var(--border-subtle)',
-                  background: samplingInterval === val ? 'rgba(6, 182, 212, 0.15)' : 'rgba(15, 23, 42, 0.6)',
-                  color: samplingInterval === val ? '#22d3ee' : 'var(--text-muted)',
+                  background: samplingInterval === val ? 'rgba(6, 182, 212, 0.15)' : 'var(--bg-card)',
+                  color: samplingInterval === val ? '#0284c7' : 'var(--text-secondary)',
                   fontSize: '11px',
                   fontWeight: 600,
                   cursor: 'pointer',
@@ -202,8 +202,8 @@ export const VideoSamplingSettings: React.FC<VideoSamplingSettingsProps> = ({
               padding: '8px 12px',
               borderRadius: '8px',
               border: '1px solid var(--border-subtle)',
-              background: 'rgba(15, 23, 42, 0.8)',
-              color: '#fff',
+              background: 'var(--bg-card)',
+              color: 'var(--text-primary)',
               fontSize: '12px',
               fontFamily: 'var(--font-mono)',
             }}

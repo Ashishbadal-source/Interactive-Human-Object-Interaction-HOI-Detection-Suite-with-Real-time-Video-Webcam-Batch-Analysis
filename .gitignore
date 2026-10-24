@@ -57,3 +57,4 @@ Thumbs.db
 # Sample raw video outputs generated during test runs
 video_results/
 video_uploads/
+scratch/

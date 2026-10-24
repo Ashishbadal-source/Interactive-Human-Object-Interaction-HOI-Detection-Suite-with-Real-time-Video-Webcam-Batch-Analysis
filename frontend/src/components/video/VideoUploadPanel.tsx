@@ -43,7 +43,7 @@ export const VideoUploadPanel: React.FC<VideoUploadPanelProps> = ({
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <IconFilm size={18} color="#8b5cf6" />
-          <span style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Video Input Source
           </span>
         </div>
@@ -73,12 +73,12 @@ export const VideoUploadPanel: React.FC<VideoUploadPanelProps> = ({
         onDragOver={handleDragOver}
         onClick={() => !isProcessing && fileInputRef.current?.click()}
         style={{
-          border: hasVideoSelected ? '2px solid rgba(139, 92, 246, 0.6)' : '2px dashed rgba(148, 163, 184, 0.25)',
+          border: hasVideoSelected ? '2px solid rgba(139, 92, 246, 0.6)' : '2px dashed var(--border-subtle)',
           borderRadius: '12px',
           padding: '20px',
           textAlign: 'center',
           cursor: isProcessing ? 'not-allowed' : 'pointer',
-          backgroundColor: hasVideoSelected ? 'rgba(139, 92, 246, 0.08)' : 'rgba(15, 23, 42, 0.5)',
+          backgroundColor: hasVideoSelected ? 'rgba(139, 92, 246, 0.08)' : 'var(--bg-card)',
           transition: 'all 200ms ease',
         }}
       >
@@ -98,17 +98,17 @@ export const VideoUploadPanel: React.FC<VideoUploadPanelProps> = ({
           width: '42px',
           height: '42px',
           borderRadius: '10px',
-          background: 'rgba(30, 41, 59, 0.8)',
+          background: 'rgba(139, 92, 246, 0.12)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           margin: '0 auto 10px',
-          color: '#c084fc',
+          color: '#8b5cf6',
         }}>
           <IconUpload size={22} />
         </div>
 
-        <div style={{ fontSize: '13px', fontWeight: 600, color: '#f8fafc', marginBottom: '4px' }}>
+        <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)', marginBottom: '4px' }}>
           {currentVideoName ? currentVideoName : 'Drop a video file here or click to browse'}
         </div>
 
@@ -120,7 +120,7 @@ export const VideoUploadPanel: React.FC<VideoUploadPanelProps> = ({
       {/* 1-Click Benchmark Video Card */}
       {samples.length > 0 && (
         <div style={{
-          background: 'rgba(15, 23, 42, 0.6)',
+          background: 'var(--bg-card)',
           borderRadius: '10px',
           border: '1px solid var(--border-subtle)',
           padding: '12px 14px',
@@ -143,7 +143,7 @@ export const VideoUploadPanel: React.FC<VideoUploadPanelProps> = ({
               <IconSparkles size={16} />
             </div>
             <div>
-              <div style={{ fontSize: '12px', fontWeight: 600, color: '#f8fafc' }}>
+              <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-primary)' }}>
                 Benchmark Test Video
               </div>
               <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>
