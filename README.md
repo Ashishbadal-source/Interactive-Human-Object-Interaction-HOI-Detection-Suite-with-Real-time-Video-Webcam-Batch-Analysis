@@ -82,14 +82,6 @@ CUDA_VISIBLE_DEVICES=0 python generate_vcoco_official.py \
 cd data/v-coco
 python vsrl_eval.py "vcoco.pickle"
 ```
-
-## Citation
-If you find this code helpful for your research, please cite our paper.
-```
-@article{kim2023relational,
-  title={Relational Context Learning for Human-Object Interaction Detection},
-  author={Kim, Sanghyun and Jung, Deunsol and Cho, Minsu},
-  journal={arXiv preprint arXiv:2304.04997},
   year={2023}
 }
 ```
