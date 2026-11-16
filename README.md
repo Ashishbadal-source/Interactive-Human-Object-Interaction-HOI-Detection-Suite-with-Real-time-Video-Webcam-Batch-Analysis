@@ -1,5 +1,3 @@
-## [CVPR 2023] Relational Context Learning for Human-Object Interaction Detection
-This repo is the official code for the CVPR 2023 paper "[Relational Context Learning for Human-Object Interaction Detection](https://arxiv.org/abs/2304.04997)".
 
 ![](figures/main_fig_3_web.png)
 ## Installation
