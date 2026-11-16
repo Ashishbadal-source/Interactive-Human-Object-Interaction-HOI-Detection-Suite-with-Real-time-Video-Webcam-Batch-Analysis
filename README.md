@@ -81,10 +81,3 @@ CUDA_VISIBLE_DEVICES=0 python generate_vcoco_official.py \
 
 cd data/v-coco
 python vsrl_eval.py "vcoco.pickle"
-```
-  year={2023}
-}
-```
-
-## Acknowledge
-This repo is based on [CDN](https://github.com/YueLiao/CDN). Thanks for their works.
