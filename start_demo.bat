@@ -7,7 +7,7 @@ echo.
 
 :: 1. Start the FastAPI backend server in a minimized window
 echo [1/2] Starting MUREN FastAPI Server on http://localhost:8000 ...
-start "MUREN Server" /min cmd /c "cd /d "%~dp0" && uvicorn backend.app.main:app --host 0.0.0.0 --port 8000"
+start "MUREN Server" /min cmd /c "cd /d "%~dp0" && .venv\Scripts\python.exe -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000"
 
 :: 2. Wait 6 seconds for the AI model to load in memory
 echo Waiting for AI model to load ...

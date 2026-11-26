@@ -28,16 +28,13 @@ Agar kisi reason se aap manually run karna chahein:
 ### Step 1: Backend Server Start Karein
 Terminal ya PowerShell kholein project folder me:
 ```powershell
-uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+cd "C:\Users\Ashish\Documents\5th_SEM\Computer Vision\Project\MUREN"
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
 ```
 > Terminal me aayega: `[MUREN AI] Starting up – loading model …` aur `Uvicorn running on http://0.0.0.0:8000`.
 
-### Step 2: Public Online Link Generate Karein
-Ek doosra terminal kholein aur chalayein:
-```powershell
-C:\Users\dell\cloudflared.exe tunnel --url http://localhost:8000
-```
-> Screen par fresh `https://.....trycloudflare.com` link aa jayega.
+Ab browser me seedha kholiye:
+👉 **`http://localhost:8000`** (Bina kisi internet ke 100% offline chalega!)
 
 ---
 

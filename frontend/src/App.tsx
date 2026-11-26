@@ -11,6 +11,7 @@ import { JsonModal } from './components/JsonModal';
 import { VideoAnalysisView } from './components/video/VideoAnalysisView';
 import { WebcamAnalysisView } from './components/webcam/WebcamAnalysisView';
 import { BatchAnalysisView } from './components/batch/BatchAnalysisView';
+import { HomeView } from './components/home/HomeView';
 import { IconX } from './components/Icons';
 
 export const App: React.FC = () => {
@@ -29,7 +30,7 @@ export const App: React.FC = () => {
   };
 
   // Navigation state
-  const [activeTab, setActiveTab] = useState<AppTab>('photo');
+  const [activeTab, setActiveTab] = useState<AppTab>('home');
 
 
   // Server state
@@ -223,6 +224,17 @@ export const App: React.FC = () => {
               <IconX size={16} />
             </button>
           </div>
+        )}
+
+        {/* Tab 0: Home Page (Landing & Overview) */}
+        {activeTab === 'home' && (
+          <HomeView
+            onNavigate={setActiveTab}
+            onOpenArchitecture={() => setIsArchitectureOpen(true)}
+            samples={samples}
+            onSelectSample={handleSelectSample}
+            health={health}
+          />
         )}
 
         {/* Tab 1: Photo Analysis (Protected Original Feature) */}

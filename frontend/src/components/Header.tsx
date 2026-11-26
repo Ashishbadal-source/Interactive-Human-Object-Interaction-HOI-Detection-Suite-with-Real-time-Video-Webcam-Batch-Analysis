@@ -2,7 +2,7 @@ import React from 'react';
 import type { HealthResponse } from '../types/hoi';
 import { IconCpu, IconSparkles, IconLayers, IconCamera, IconFiles, IconSun, IconMoon } from './Icons';
 
-export type AppTab = 'photo' | 'video' | 'webcam' | 'batch';
+export type AppTab = 'home' | 'photo' | 'video' | 'webcam' | 'batch';
 
 interface HeaderProps {
   health: HealthResponse | null;
@@ -25,7 +25,11 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="glass-panel" style={{ margin: '16px 20px', padding: '14px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+      <div 
+        onClick={() => onTabChange('home')}
+        style={{ display: 'flex', alignItems: 'center', gap: '14px', cursor: 'pointer' }}
+        title="Go to Home"
+      >
         <div style={{
           width: '42px',
           height: '42px',
@@ -63,6 +67,27 @@ export const Header: React.FC<HeaderProps> = ({
         border: '1px solid var(--border-subtle)',
         gap: '4px',
       }}>
+        <button
+          onClick={() => onTabChange('home')}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            padding: '7px 14px',
+            borderRadius: '7px',
+            border: 'none',
+            fontSize: '13px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            transition: 'all 150ms ease',
+            background: activeTab === 'home' ? 'linear-gradient(135deg, #06b6d4, #6366f1)' : 'transparent',
+            color: activeTab === 'home' ? '#ffffff' : 'var(--text-secondary)',
+            boxShadow: activeTab === 'home' ? '0 2px 10px rgba(6, 182, 212, 0.35)' : 'none',
+          }}
+        >
+          <IconSparkles size={14} />
+          <span>Home</span>
+        </button>
         <button
           onClick={() => onTabChange('photo')}
           style={{

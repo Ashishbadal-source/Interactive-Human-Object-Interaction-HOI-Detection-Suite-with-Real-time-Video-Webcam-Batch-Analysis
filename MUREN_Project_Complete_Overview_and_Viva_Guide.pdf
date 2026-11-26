@@ -1,0 +1,527 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 8344 >>
+stream
+1.00 w
+0.060 0.090 0.160 rg 0.00 785.00 595.28 56.89 re f
+1.00 w
+0.020 0.710 0.830 rg 0.00 782.00 595.28 3.00 re f
+BT /F2 12.5 Tf 1.000 1.000 1.000 rg 36.00 812.00 Td (MUREN AI - Human-Object Interaction \(HOI\) Detection) Tj ET
+BT /F1 8.5 Tf 0.750 0.850 0.950 rg 36.00 796.00 Td (Complete Project Guide, Architecture, Pipeline, Dataset, Use Cases & Viva Q&A) Tj ET
+BT /F2 8.5 Tf 0.020 0.710 0.830 rg 355.00 812.00 Td (Ashish Badal | 5th Sem Computer Vision Project) Tj ET
+0.80 w 0.800 0.840 0.880 RG 36.00 38.00 m 559.28 38.00 l S
+BT /F1 7.5 Tf 0.450 0.500 0.580 rg 36.00 25.00 Td (CVPR 2023 Implementation: Relational Context Learning for HOI Detection \(POSTECH\)) Tj ET
+BT /F2 8.0 Tf 0.300 0.350 0.450 rg 525.00 25.00 Td (Page 1) Tj ET
+0.80 w
+0.950 0.980 1.000 rg 0.850 0.900 0.950 RG 36.00 669.00 523.28 91.00 re b
+1.00 w
+0.020 0.710 0.830 rg 36.00 669.00 4.00 91.00 re f
+BT /F2 9.0 Tf 0.060 0.200 0.420 rg 48.00 748.00 Td (PROJECT EXECUTIVE SUMMARY) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 735.00 Td (Project: MUREN AI - Relational Context Learning for Human-Object Interaction \(HOI\) Detection) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 722.00 Td (Student / Author: Ashish Badal | 5th Semester Computer Vision Project) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 709.00 Td (Reference Paper: CVPR 2023 \(IEEE/CVF Conference on Computer Vision and Pattern Recognition\)) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 696.00 Td (Core Goal: Localize humans and objects with bounding boxes AND predict their interactive actions as <Subject, Verb, Object> triplets) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 683.00 Td (Primary Checkpoint: HICO-DET Benchmark \(32.87 mAP, 80 Objects, 117 Verbs, 600 HOI Triplet Categories\)) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 643.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 649.00 Td (1. Project Introduction & Problem Statement) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 626.50 Td (Computer Vision mein traditional Object Detection \(jaise YOLO ya Faster R-CNN\) sirf ye batata hai ki image mein 'kya hai' aur) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 614.50 Td ('kahan hai' \(e.g. Person, Bicycle\). Lekin Human-Object Interaction \(HOI\) Detection usse ek kadam aage jaakar ye batata hai ki) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 602.50 Td ('insaan us object ke saath kya ACTION kar raha hai'.) Tj ET
+0.80 w
+0.950 0.990 0.960 rg 0.850 0.900 0.950 RG 36.00 534.00 523.28 65.00 re b
+1.00 w
+0.100 0.650 0.300 rg 36.00 534.00 4.00 65.00 re f
+BT /F2 9.0 Tf 0.060 0.200 0.420 rg 48.00 587.00 Td (HOI Output Triplet Representation:) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 574.00 Td (<Subject \(Human BBox\), Action Verb \(e.g. ride, eat, hold, talk_on\), Target Object \(Object BBox + Class\)>) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 561.00 Td (Example 1: <person, ride, bicycle>  |  Example 2: <person, eat, pizza>  |  Example 3: <person, talk_on, cell phone>) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 548.00 Td (Detects simultaneous multi-person and multi-object relationships from a single image in an end-to-end pass.) Tj ET
+BT /F2 8.5 Tf 0.150 0.180 0.240 rg 36.00 517.50 Td (Kyu Hard Hai? \(Why is HOI difficult compared to Object Detection\):) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 505.50 Td (- Semantic Combinatorial Complexity: 80 objects aur 117 verbs milakar 600 valid interactions banti hain. Har entity ki spatial) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 493.50 Td (aur relational meaning alag hoti hai.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 481.50 Td (- Multi-label Non-exclusive Actions: Ek hi insaan ek hi samay par ek object ke saath multiple actions kar sakta hai \(e.g.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 469.50 Td (person holding AND inspecting a phone\).) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 457.50 Td (- Long-tail Distribution & Rare Classes: Kuch interactions bohot common hoti hain \(hold phone\), jabki kuch bohot rare hoti) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 445.50 Td (hain \(hug giraffe\). Model ko dono par perform karna padta hai.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 424.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 430.00 Td (2. Benchmark Datasets: HICO-DET & V-COCO) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 407.50 Td (MUREN model ko do sabse bade international benchmark datasets par train aur evaluate kiya gaya hai:) Tj ET
+1.00 w
+0.120 0.200 0.320 rg 36.00 388.00 523.28 16.00 re f
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 41.00 393.00 Td (Parameter) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 151.00 393.00 Td (HICO-DET Benchmark) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 371.00 393.00 Td (V-COCO Benchmark) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 372.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 377.00 Td (Full Name) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 377.00 Td (Humans Interacting with Common Objects - Detection) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 377.00 Td (Verbs in COCO \(V-COCO\)) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 356.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 361.00 Td (Total Images) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 361.00 Td (47,776 images \(38,118 train / 9,658 test\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 361.00 Td (10,346 images \(2,533 train / 2,867 val / 4,946 test\)) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 340.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 345.00 Td (Object Classes) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 345.00 Td (80 categories \(All standard MS-COCO objects\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 345.00 Td (81 categories \(80 COCO classes + background\)) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 324.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 329.00 Td (Action / Verb Classes) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 329.00 Td (117 distinct verbs \(ride, hold, throw, wash, etc.\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 329.00 Td (29 action categories) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 308.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 313.00 Td (HOI Combinations) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 313.00 Td (600 valid <verb, object> interaction pairs) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 313.00 Td (222 valid interaction triplets) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 292.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 297.00 Td (Rare Classes \(<10 ex.\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 297.00 Td (138 rare interaction triplets) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 297.00 Td (Evaluated on AP_role \(scenario 1 & 2\)) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 276.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 281.00 Td (Primary Metric) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 281.00 Td (mAP \(Full, Rare, Non-Rare\) at IoU >= 0.5) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 371.00 281.00 Td (mAP_all / Role AP) Tj ET
+BT /F2 8.5 Tf 0.150 0.180 0.240 rg 36.00 261.50 Td (Dataset Features & Annotations:) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 249.50 Td (- Human Bounding Box: [x1, y1, x2, y2] normalized coordinates jo subject person ko localize karte hain.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 237.50 Td (- Object Bounding Box & Class: [x1, y1, x2, y2] coordinates aur 80 COCO classes mein se integer category ID.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 225.50 Td (- Multi-hot Verb Vector: 117-dimensional binary vector jisme 1 indicate karta hai ki kaunse verbs active hain.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 204.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 210.00 Td (3. MUREN Model Architecture & Innovation) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 187.50 Td (MUREN \(MUltiplex RElation Network\) ek Transformer-based End-to-End One-Stage model hai. Iska sabse bada innovation hai:) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 175.50 Td (Three-Branch Decoder with MURE Relational Context Learning.) Tj ET
+
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 10137 >>
+stream
+1.00 w
+0.060 0.090 0.160 rg 0.00 785.00 595.28 56.89 re f
+1.00 w
+0.020 0.710 0.830 rg 0.00 782.00 595.28 3.00 re f
+BT /F2 12.5 Tf 1.000 1.000 1.000 rg 36.00 812.00 Td (MUREN AI - Human-Object Interaction \(HOI\) Detection) Tj ET
+BT /F1 8.5 Tf 0.750 0.850 0.950 rg 36.00 796.00 Td (Complete Project Guide, Architecture, Pipeline, Dataset, Use Cases & Viva Q&A) Tj ET
+BT /F2 8.5 Tf 0.020 0.710 0.830 rg 355.00 812.00 Td (Ashish Badal | 5th Sem Computer Vision Project) Tj ET
+0.80 w 0.800 0.840 0.880 RG 36.00 38.00 m 559.28 38.00 l S
+BT /F1 7.5 Tf 0.450 0.500 0.580 rg 36.00 25.00 Td (CVPR 2023 Implementation: Relational Context Learning for HOI Detection \(POSTECH\)) Tj ET
+BT /F2 8.0 Tf 0.300 0.350 0.450 rg 525.00 25.00 Td (Page 2) Tj ET
+1.00 w
+0.120 0.200 0.320 rg 36.00 744.00 523.28 16.00 re f
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 41.00 749.00 Td (Architecture Stage) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 156.00 749.00 Td (Component / Layers) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 296.00 749.00 Td (Role & Functionality in MUREN) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 728.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 733.00 Td (1. Feature Backbone) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 733.00 Td (ResNet-50 \(DC5 or standard\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 733.00 Td (Extracts high-level 2048-dim visual feature maps from input image \(H/32, W/32\).) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 712.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 717.00 Td (2. Input Projection) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 717.00 Td (1x1 Conv2D \(2048 -> 256\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 717.00 Td (Reduces channel depth to transformer hidden dimension \(d_model = 256\).) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 696.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 701.00 Td (3. Positional Encoding) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 701.00 Td (Sine / Cosine Encoding) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 701.00 Td (Injects 2D spatial coordinate awareness into permutation-invariant transformer tokens.) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 680.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 685.00 Td (4. Transformer Encoder) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 685.00 Td (6 Layers \(8 Heads, 2048 FFN\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 685.00 Td (Performs global image-wide self-attention. Generates enriched 'Memory' features.) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 664.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 669.00 Td (5. Three-Branch Decoder) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 669.00 Td (6 Layers x 3 Branches) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 669.00 Td (Human queries \(64\), Object queries \(64\), and Relation queries \(64\) decode in parallel.) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 648.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 653.00 Td (6. MURE Module \(USP\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 653.00 Td (Multiplex Relation Engine) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 653.00 Td (Extracts Unary, Pairwise, and Ternary relational context across all 3 branches.) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 632.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 637.00 Td (7. ATF Fusion Module) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 637.00 Td (Attention Task Fusion) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 637.00 Td (Fuses MURE relational context back into each branch via adaptive Sigmoid gating.) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 616.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 621.00 Td (8. Prediction Heads) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 156.00 621.00 Td (Linear + MLP Projections) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 296.00 621.00 Td (Outputs subject boxes, object boxes, object softmax logits, and verb sigmoid logits.) Tj ET
+BT /F2 9.5 Tf 0.100 0.250 0.450 rg 40.00 600.00 Td (Detailed Breakdown of Core Innovations:) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 585.50 Td (- Three-Branch Architecture: Purane models \(jaise QPIC\) ek single query use karte the. MUREN teen specialized query branches) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 573.50 Td (use karta hai: \(1\) Human branch, \(2\) Object branch, \(3\) Relation branch. Isse specialization hoti hai.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 561.50 Td (- MURE \(Multiplex Relation Encoder\): Teeno branches ke intermediate features ko combine karta hai: \(a\) Ternary relation) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 549.50 Td (\(Human+Object+Relation concat\), \(b\) Unary self-attention, \(c\) Pairwise cross-attention \(Human-Object, Human-Rel, Object-Rel\),) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 537.50 Td (\(d\) Multiplex context generation.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 525.50 Td (- ATF \(Attention-based Task Fusion\): Formula: output = task_feat + Sigmoid\(MLP\(task, context\)\) * MLP\(task, context\). Isse) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 513.50 Td (model automatically decide karta hai ki kitna relational context retain karna hai.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 492.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 498.00 Td (4. Complete Working Pipeline \(Input to Output\)) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 475.50 Td (Jab koi user image ya video frame upload karta hai, toh inference step-by-step kaise execute hota hai:) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 463.80 Td (- Step 1: Image Preprocessing: Image resize short side = 800px, max 1333px. ImageNet mean [0.485, 0.456, 0.406] aur std [0.229,) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 452.30 Td (0.224, 0.225] se normalize karke [1, 3, H, W] tensor banta hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 440.80 Td (- Step 2: ResNet-50 Feature Extraction: ResNet-50 convolutional layers se pass hota hai. C5 feature map \(2048 channels\) extract) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 429.30 Td (hoti hai aur 1x1 conv se 256 dimensions mein project hoti hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 417.80 Td (- Step 3: Transformer Encoder Attention: Sine positional encoding add karke 6 transformer encoder layers global self-attention) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 406.30 Td (lagati hain. Output banta hai 'Memory' \(global context\).) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 394.80 Td (- Step 4: Three-Branch Decoding & MURE Fusion: 64 human, 64 object, aur 64 relation queries parallel decode hoti hain. Har layer) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 383.30 Td (par MURE relational context calculate karke ATF se wapas fuse karta hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 371.80 Td (- Step 5: Output Heads & Classification: Human head [cx, cy, w, h] predict karta hai, Object head box + 81-class logits deta hai,) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 360.30 Td (Relation head 117-verb sigmoid probabilities deta hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 348.80 Td (- Step 6: Threshold Filtering & Post-Processing: Action score = verb_prob * obj_prob. Filter: action_score >= 0.20 aur obj_score) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 337.30 Td (>= 0.50. Boxes ko original image size par scale karke colored annotations draw kiye jaate hain.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 316.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 322.00 Td (5. Training Setup, Loss Functions & Hungarian Matcher) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 299.50 Td (MUREN end-to-end bipartite matching loss par train hota hai using the Hungarian algorithm:) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 287.50 Td (- Hungarian Bipartite Matcher: Model 64 queries predict karta hai, jabki ground truth mein shayad sirf 2 interactions hon.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 275.50 Td (Hungarian algorithm \(scipy linear_sum_assignment\) lowest matching cost ke hisab se optimal 1-to-1 pair find karta hai.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 263.50 Td (- Object Classification Loss \(loss_obj_ce\): Standard Cross-Entropy Loss with relative background / no-object coefficient) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 251.50 Td (eos_coef = 0.1.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 239.50 Td (- Verb Classification Loss \(loss_verb_ce\): Focal Loss with alpha = 0.5 to tackle extreme class imbalance across 117 actions.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 227.50 Td (Focuses on hard/rare action samples.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 215.50 Td (- Bounding Box L1 Loss \(loss_sub_bbox, loss_obj_bbox\): Smooth L1 loss on normalized center coordinates and width/height for) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 203.50 Td (both human and object boxes \(coef = 2.5\).) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 191.50 Td (- GIoU Loss \(loss_sub_giou, loss_obj_giou\): Generalized Intersection over Union loss \(coef = 1.0\) ensures spatial box) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 179.50 Td (convergence even when predicted and ground truth boxes do not initially overlap.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 167.50 Td (- Auxiliary Loss at Every Decoder Layer: All intermediate 6 decoder layers calculate auxiliary losses to enforce strong) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 155.50 Td (gradient flow and faster convergence.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 134.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 140.00 Td (6. Evaluation Metrics & Benchmark Results) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 117.50 Td (Evaluation mean Average Precision \(mAP\) par hoti hai at IoU threshold 0.5 for both human and object boxes:) Tj ET
+
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 10474 >>
+stream
+1.00 w
+0.060 0.090 0.160 rg 0.00 785.00 595.28 56.89 re f
+1.00 w
+0.020 0.710 0.830 rg 0.00 782.00 595.28 3.00 re f
+BT /F2 12.5 Tf 1.000 1.000 1.000 rg 36.00 812.00 Td (MUREN AI - Human-Object Interaction \(HOI\) Detection) Tj ET
+BT /F1 8.5 Tf 0.750 0.850 0.950 rg 36.00 796.00 Td (Complete Project Guide, Architecture, Pipeline, Dataset, Use Cases & Viva Q&A) Tj ET
+BT /F2 8.5 Tf 0.020 0.710 0.830 rg 355.00 812.00 Td (Ashish Badal | 5th Sem Computer Vision Project) Tj ET
+0.80 w 0.800 0.840 0.880 RG 36.00 38.00 m 559.28 38.00 l S
+BT /F1 7.5 Tf 0.450 0.500 0.580 rg 36.00 25.00 Td (CVPR 2023 Implementation: Relational Context Learning for HOI Detection \(POSTECH\)) Tj ET
+BT /F2 8.0 Tf 0.300 0.350 0.450 rg 525.00 25.00 Td (Page 3) Tj ET
+1.00 w
+0.120 0.200 0.320 rg 36.00 744.00 523.28 16.00 re f
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 41.00 749.00 Td (Method / Model) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 181.00 749.00 Td (Backbone) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 266.00 749.00 Td (Full mAP) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 341.00 749.00 Td (Rare mAP) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 416.00 749.00 Td (Non-Rare mAP) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 491.00 749.00 Td (Known Object \(KO\)) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 728.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 733.00 Td (QPIC \(CVPR 2021\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 181.00 733.00 Td (ResNet-50) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 266.00 733.00 Td (29.07) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 733.00 Td (21.85) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 416.00 733.00 Td (31.23) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 491.00 733.00 Td (31.68) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 712.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 717.00 Td (CDN \(NeurIPS 2021\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 181.00 717.00 Td (ResNet-50) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 266.00 717.00 Td (31.44) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 717.00 Td (27.39) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 416.00 717.00 Td (32.64) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 491.00 717.00 Td (34.09) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 696.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 701.00 Td (GEN-VLKT \(CVPR 2022\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 181.00 701.00 Td (ResNet-50) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 266.00 701.00 Td (33.75) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 701.00 Td (29.25) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 416.00 701.00 Td (35.10) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 491.00 701.00 Td (36.78) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 680.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 685.00 Td (MUREN \(This Project - CVPR 2023\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 181.00 685.00 Td (ResNet-50) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 266.00 685.00 Td (32.87) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 685.00 Td (28.67) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 416.00 685.00 Td (34.12) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 491.00 685.00 Td (35.52) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 664.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 669.00 Td (MUREN \(with DC5 dilation\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 181.00 669.00 Td (ResNet-50) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 266.00 669.00 Td (34.25) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 669.00 Td (30.12) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 416.00 669.00 Td (35.48) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 491.00 669.00 Td (37.10) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 649.50 Td (Key takeaway: MUREN achieves competitive state-of-the-art accuracy with significantly better relational context modeling without) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 637.50 Td (requiring heavy external vision-language pretraining.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 616.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 622.00 Td (7. Full-Stack Web Application & Features) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 599.50 Td (Model ko live demonstration aur practical use ke liye ek production-grade full-stack system mein integrate kiya gaya hai:) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 587.50 Td (- Single Image Analysis \(Tab 1\): Interactive HTML5 canvas with hover inspection, custom score sliders \(0.0 - 1.0\), raw JSON) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 575.50 Td (inspector, and Explainable AI \(XAI\) attention heatmaps.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 563.50 Td (- Video Stream & Temporal Tracking \(Tab 2\): Frame-by-frame sampling \(interval-based or timestamp-based\), IoU-based action) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 551.50 Td (interval tracking across time, and full annotated video compilation & export.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 539.50 Td (- Real-Time Live Webcam \(Tab 3\): High-throughput bi-directional WebSocket connection \(/api/webcam/stream\) streaming base64) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 527.50 Td (JPEG frames for instant real-time action feedback.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 515.50 Td (- Batch Processing & Audit Reports \(Tab 4\): Upload up to 50 images simultaneously, view action frequency distributions, and) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 503.50 Td (download formal CSV and printable HTML audit reports.) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 491.50 Td (- Deployment & 1-Click Launch: Configured start_demo.bat launcher, Uvicorn ASGI server on port 8000, and integrated Cloudflare) Tj ET
+BT /F1 8.5 Tf 0.180 0.220 0.280 rg 44.00 479.50 Td (Tunnel for secure public HTTPS remote sharing.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 458.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 464.00 Td (8. Real-World Applications & Industry Use Cases) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 441.80 Td (- Industrial & Construction Safety: CCTV cameras se detect karna ki worker hard hat pehan raha hai, safety harness wear kar raha) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 430.30 Td (hai, ya dangerous heavy machinery ke paas unsafe act kar raha hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 418.80 Td (- Autonomous Driving & ADAS: Vehicle perception system samajh sakta hai ki pedestrian road cross kar raha hai, phone dekh raha) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 407.30 Td (hai, ya bicycle ride kar raha hai, jisse collision avoidance improve hoti hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 395.80 Td (- Healthcare & Elder Patient Care: Hospital rooms ya old-age homes mein monitoring: patient medicine drink kar raha hai, walk kar) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 384.30 Td (raha hai, ya bed par safely lie_on hai, bina invasive wearable sensors ke.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 372.80 Td (- Smart Retail & Loss Prevention: Store cameras detect kar sakti hain ki customer shelf se product pick kar raha hai, inspect kar) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 361.30 Td (raha hai, cart mein place kar raha hai, ya bina pay kiye carry away kar raha hai.) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 349.80 Td (- Human-Robot Interaction \(HRI\): Industrial aur domestic robots insaan ke haath mein kya hai \(tools, cups\) samajh kar) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 44.00 338.30 Td (collaboratively assist kar sakte hain.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 317.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 323.00 Td (9. Top Viva & Presentation Q&A \(Examiner Prep\)) Tj ET
+BT /F1 8.5 Tf 0.150 0.180 0.240 rg 36.00 300.50 Td (Professors aur external examiners ke sabse common aur important questions ke pointwise accurate answers:) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 281.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 285.00 Td (Q1: What is the core objective of your project?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 270.80 Td (A: Our project implements MUREN \(CVPR 2023\) for Human-Object Interaction \(HOI\) detection. It detects humans and objects using) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 259.30 Td (bounding boxes and predicts their interactive action as <Subject, Verb, Object> triplets.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 237.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 241.00 Td (Q2: How is HOI detection different from standard Object Detection?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 226.80 Td (A: Object detection only identifies object classes and their locations \('what' and 'where'\). HOI detection goes one level deeper) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 215.30 Td (to identify the semantic relationship and activity between the human and object \('what action is occurring'\).) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 193.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 197.00 Td (Q3: What does MUREN stand for?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 182.80 Td (A: MUREN stands for MUltiplex RElation Network. It models unary, pairwise, and ternary relations across human, object, and action) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 171.30 Td (queries.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 149.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 153.00 Td (Q4: Why did you choose a Transformer-based architecture over CNNs?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 138.80 Td (A: CNNs have localized receptive fields and struggle to connect humans and distant objects. Transformers use self-attention to) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 127.30 Td (capture global contextual relationships across the entire image in a single pass.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 105.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 109.00 Td (Q5: What are the three branches in the MUREN decoder?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 94.80 Td (A: The three parallel branches are: \(1\) Human Branch \(predicts human bounding box\), \(2\) Object Branch \(predicts object bounding) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 83.30 Td (box and class\), and \(3\) Relation Branch \(predicts the verb/action\).) Tj ET
+
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 9494 >>
+stream
+1.00 w
+0.060 0.090 0.160 rg 0.00 785.00 595.28 56.89 re f
+1.00 w
+0.020 0.710 0.830 rg 0.00 782.00 595.28 3.00 re f
+BT /F2 12.5 Tf 1.000 1.000 1.000 rg 36.00 812.00 Td (MUREN AI - Human-Object Interaction \(HOI\) Detection) Tj ET
+BT /F1 8.5 Tf 0.750 0.850 0.950 rg 36.00 796.00 Td (Complete Project Guide, Architecture, Pipeline, Dataset, Use Cases & Viva Q&A) Tj ET
+BT /F2 8.5 Tf 0.020 0.710 0.830 rg 355.00 812.00 Td (Ashish Badal | 5th Sem Computer Vision Project) Tj ET
+0.80 w 0.800 0.840 0.880 RG 36.00 38.00 m 559.28 38.00 l S
+BT /F1 7.5 Tf 0.450 0.500 0.580 rg 36.00 25.00 Td (CVPR 2023 Implementation: Relational Context Learning for HOI Detection \(POSTECH\)) Tj ET
+BT /F2 8.0 Tf 0.300 0.350 0.450 rg 525.00 25.00 Td (Page 4) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 744.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 748.00 Td (Q6: What is the function of the MURE module?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 733.80 Td (A: MURE \(Multiplex Relation Encoder\) enables cross-talk between the three decoder branches. It computes ternary representations,) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 722.30 Td (unary self-attentions, and pairwise cross-attentions to form a comprehensive multiplex relational context.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 700.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 704.00 Td (Q7: What is the ATF module?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 689.80 Td (A: ATF \(Attention-based Task Fusion\) dynamically injects the MURE relational context back into each individual branch using a) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 678.30 Td (Sigmoid-gated adaptive fusion layer.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 656.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 660.00 Td (Q8: Which datasets did you use and what are their specifications?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 645.80 Td (A: Primary dataset is HICO-DET with 47,776 images, 80 object classes, 117 action verbs, and 600 HOI categories. Secondary dataset) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 634.30 Td (is V-COCO with 10,346 images, 81 objects, and 29 action classes.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 612.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 616.00 Td (Q9: What loss functions are used to train the model?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 601.80 Td (A: A combination of: \(1\) Focal Loss for verb classification \(tackles class imbalance\), \(2\) Cross-Entropy for object) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 590.30 Td (classification, \(3\) L1 Loss for bounding box coordinates, and \(4\) GIoU Loss for spatial box overlap.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 568.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 572.00 Td (Q10: How does the Hungarian Matcher work?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 557.80 Td (A: Since the model predicts 64 fixed queries while images have varying ground truths, the Hungarian algorithm finds a global) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 546.30 Td (minimum-cost bipartite matching between predicted queries and ground truth annotations.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 524.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 528.00 Td (Q11: What benchmark performance does MUREN achieve?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 513.80 Td (A: On the HICO-DET test set, MUREN achieves 32.87 mAP under the default setting and 35.52 mAP under the Known Object setting,) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 502.30 Td (outperforming older models like QPIC and CDN.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 480.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 484.00 Td (Q12: Why does the relation branch use Sigmoid activation instead of Softmax?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 469.80 Td (A: Because a person can perform multiple actions with the same object simultaneously \(multi-label classification, e.g. holding and) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 458.30 Td (inspecting\). Softmax assumes mutually exclusive single labels, whereas Sigmoid treats each verb independently.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 436.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 440.00 Td (Q13: How does your web application handle video tracking?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 425.80 Td (A: It samples frames at regular intervals, runs MUREN inference on each frame, and tracks human-object pairs over time using an) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 414.30 Td (IoU spatial overlap matching threshold to construct continuous Action Intervals.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 392.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 396.00 Td (Q14: What is the latency and can it run on CPU?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 381.80 Td (A: Yes! Inference on CPU takes approximately 600ms - 1200ms per image. On an NVIDIA GPU \(e.g. RTX 3060/4060\), latency drops to) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 370.30 Td (~40ms - 60ms, enabling real-time video processing.) Tj ET
+1.00 w
+0.940 0.960 0.990 rg 36.00 348.00 523.28 17.00 re f
+BT /F2 8.5 Tf 0.080 0.220 0.480 rg 42.00 352.00 Td (Q15: What are the main limitations and future scopes of this project?) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 337.80 Td (A: Limitations: \(1\) Limited to 80 COCO objects and 117 verbs; \(2\) Performance drops in heavily occluded or crowded scenes. Future) Tj ET
+BT /F1 8.2 Tf 0.180 0.220 0.280 rg 46.00 326.30 Td (scope: Integrating Vision-Language models like CLIP for open-vocabulary zero-shot HOI detection.) Tj ET
+0.80 w
+0.930 0.960 0.990 rg 0.150 0.400 0.750 RG 36.00 302.00 523.28 22.00 re b
+BT /F2 11.0 Tf 0.080 0.220 0.480 rg 44.00 308.00 Td (10. 1-Minute Viva Cheat Sheet \(Final Summary\)) Tj ET
+1.00 w
+0.120 0.200 0.320 rg 36.00 278.00 523.28 16.00 re f
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 41.00 283.00 Td (Key Parameter) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 151.00 283.00 Td (Project Value) Tj ET
+BT /F2 8.0 Tf 1.000 1.000 1.000 rg 341.00 283.00 Td (Technical Significance) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 262.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 267.00 Td (Backbone Network) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 267.00 Td (ResNet-50 \(ImageNet-1K Pretrained\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 267.00 Td (Extracts 2048-dim feature maps; frozen BatchNorm for stability.) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 246.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 251.00 Td (Hidden Dimension) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 251.00 Td (d_model = 256, 8 Attention Heads) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 251.00 Td (Standard DETR transformer embedding dimension.) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 230.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 235.00 Td (Encoder / Decoder) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 235.00 Td (6 Encoder Layers / 6 Decoder Layers) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 235.00 Td (Global feature reasoning + 3-branch query refinement.) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 214.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 219.00 Td (Interaction Queries) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 219.00 Td (64 learned queries per branch) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 219.00 Td (Max concurrent interactions the model can inspect per image.) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 198.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 203.00 Td (Verb Classes) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 203.00 Td (117 HICO-DET action categories) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 203.00 Td (Evaluated via multi-label binary focal loss \(alpha = 0.5\).) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 182.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 187.00 Td (Object Classes) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 187.00 Td (80 COCO object classes) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 187.00 Td (Evaluated via multiclass cross-entropy loss with EOS coefficient.) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 166.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 171.00 Td (Benchmark Score) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 171.00 Td (32.87 mAP \(HICO-DET Default\)) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 171.00 Td (Evaluated with IoU >= 0.5 for human, object, and correct verb.) Tj ET
+0.50 w
+1.000 1.000 1.000 rg 0.880 0.900 0.940 RG 36.00 150.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 155.00 Td (Tech Stack) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 155.00 Td (PyTorch, FastAPI, React 18, OpenCV) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 155.00 Td (Modern async web architecture with WebSocket streaming.) Tj ET
+0.50 w
+0.960 0.970 0.990 rg 0.880 0.900 0.940 RG 36.00 134.00 523.28 16.00 re b
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 41.00 139.00 Td (Demo Execution) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 151.00 139.00 Td (start_demo.bat -> http://localhost:8000) Tj ET
+BT /F1 7.8 Tf 0.150 0.200 0.280 rg 341.00 139.00 Td (Instant offline local run + Cloudflare tunnel for online demo.) Tj ET
+
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 1897 >>
+stream
+1.00 w
+0.060 0.090 0.160 rg 0.00 785.00 595.28 56.89 re f
+1.00 w
+0.020 0.710 0.830 rg 0.00 782.00 595.28 3.00 re f
+BT /F2 12.5 Tf 1.000 1.000 1.000 rg 36.00 812.00 Td (MUREN AI - Human-Object Interaction \(HOI\) Detection) Tj ET
+BT /F1 8.5 Tf 0.750 0.850 0.950 rg 36.00 796.00 Td (Complete Project Guide, Architecture, Pipeline, Dataset, Use Cases & Viva Q&A) Tj ET
+BT /F2 8.5 Tf 0.020 0.710 0.830 rg 355.00 812.00 Td (Ashish Badal | 5th Sem Computer Vision Project) Tj ET
+0.80 w 0.800 0.840 0.880 RG 36.00 38.00 m 559.28 38.00 l S
+BT /F1 7.5 Tf 0.450 0.500 0.580 rg 36.00 25.00 Td (CVPR 2023 Implementation: Relational Context Learning for HOI Detection \(POSTECH\)) Tj ET
+BT /F2 8.0 Tf 0.300 0.350 0.450 rg 525.00 25.00 Td (Page 5) Tj ET
+0.80 w
+0.960 0.980 1.000 rg 0.850 0.900 0.950 RG 36.00 669.00 523.28 91.00 re b
+1.00 w
+0.080 0.220 0.480 rg 36.00 669.00 4.00 91.00 re f
+BT /F2 9.0 Tf 0.060 0.200 0.420 rg 48.00 748.00 Td (1-MINUTE ELEVATOR PITCH FOR PROFESSORS / EXAMINERS:) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 735.00 Td ('Respected Examiner, my 5th semester Computer Vision project implements MUREN, a CVPR 2023 paper for Human-Object) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 722.00 Td (Interaction Detection. While standard object detection only finds objects, our model identifies human-object relationships) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 709.00 Td (as <Subject, Action, Object> triplets using a novel Three-Branch Transformer Decoder with Multiplex Relational Reasoning.) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 696.00 Td (Trained on HICO-DET across 80 objects and 117 actions, it achieves 32.87 mAP. We have deployed it as an interactive web suite) Tj ET
+BT /F1 8.0 Tf 0.200 0.250 0.350 rg 48.00 683.00 Td (supporting Single Image analysis with XAI attention heatmaps, Video temporal tracking, Live Webcam streaming, and Batch audits.') Tj ET
+
+endstream
+endobj
+xref
+0 16
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000148 00000 n 
+0000000218 00000 n 
+0000000293 00000 n 
+0000000371 00000 n 
+0000000523 00000 n 
+0000008919 00000 n 
+0000009071 00000 n 
+0000019261 00000 n 
+0000019415 00000 n 
+0000029943 00000 n 
+0000030097 00000 n 
+0000039644 00000 n 
+0000039798 00000 n 
+trailer
+<< /Size 16 /Root 1 0 R >>
+startxref
+41748
+%%EOF
